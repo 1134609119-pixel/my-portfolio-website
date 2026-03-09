@@ -3,186 +3,142 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>个人简历网站 - 胡玮祺</title>
+  <title>个人简历网站 - 作品集</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 顶部导航 -->
-  <header class="site-header">
-    <div class="brand">个人简历</div>
-    <nav class="nav" aria-label="主导航">
-      <a href="#home">首页</a>
-      <a href="#experiences">经历</a>
-      <a href="#portfolio">作品集</a>
-      <a href="#contact">联系</a>
-    </nav>
-    <a class="cta" href="assets/files/resume.pdf" download>下载简历</a>
+  <!-- 公共组件：导航头部 -->
+  <header class="ui-header" aria-label="站点导航">
+    <a href="index.html" class="nav-brand" aria-label="返回首页">主页</a>
+    <div class="nav-actions">
+      <a href="#projects" class="btn-link">查看案例</a>
+      <a href="assets/胡玮祺_简历.pdf" download class="btn-fill">下载简历</a>
+    </div>
   </header>
 
-  <!-- 主内容区域 -->
-  <main id="home" class="page-wrap">
-    <section class="hero container hero-layout">
-      <div class="hero-media">
-        <div class="hero-photo-wrap" aria-label="个人照片占位">
-          <img src="assets/images/profile.png" alt="个人照片占位" class="hero-photo" />
+  <!-- 公共组件：Hero 区（黑色背景，左文案右图片拼贴，1:1 模拟设计） -->
+  <section class="ui-hero" aria-label="个人介绍轮播">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h2 class="sr-only" aria-label="副标题说明">胡玮祺个人作品集</h2>
+        <h1 class="hero-title">AI工具爱好者<br><span class="cyan">前端开发 x 市场</span></h1>
+        <p class="hero-sub">以技术解决实际问题，通过数据驱动、跨团队协作和持续迭代，展现在 AI 领域的综合能力与影响力。</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-fill">查看案例</a>
+          <a href="assets/胡玮祺_简历.pdf" download class="btn-outline">下载简历</a>
         </div>
-      </div>
-      <div class="hero-content">
-        <h1 class="name">胡玮祺</h1>
-        <div class="title">中山大学硕士 | 资源与环境 | GIS开发 × 品牌市场复合背景</div>
-        <p class="summary">
-          兼具技术开发（GIS/JavaScript/Python）与海外市场从0到1开拓经验，具备强烈的成交导向意识和跨部门协调能力。
-        </p>
-        <div class="cta-row">
-          <a class="btn primary" href="#portfolio">查看作品集</a>
-          <a class="btn outline" href="assets/files/resume.pdf" download>下载简历</a>
-        </div>
-        <div class="contacts" aria-label="联系方式">
-          <span>📞 157-9786-0920</span>
-          <span>📧 wqh71998@163.com</span>
-        </div>
-      </div>
-    </section>
-    <div id="project-management" style="display:none"></div>
-    <!-- 核心能力 -->
-    <section class="container core-abilities" id="core">
-      <h2>核心能力</h2>
-
-      <div class="tag-cloud" aria-label="核心能力标签">
-          <a class="tag c1" href="#experiences" data-target-id="gis-project">GIS开发</a>
-          <a class="tag c2" href="#experiences" data-target-id="market-dev">市场开拓</a>
-          <a class="tag c3" href="#experiences" data-target-id="portfolio">品牌推广</a>
-          <a class="tag c4" href="#experiences" data-target-id="pre-sales">售前支持</a>
-          <a class="tag c5" href="#experiences" data-target-id="coord">跨部门协调</a>
-          <a class="tag c6" href="#experiences" data-target-id="project-management">项目管理</a>
-          <a class="tag c7" href="#experiences" data-target-id="ai-media">AI新媒体</a>
-          <a class="tag c8" href="#experiences" data-target-id="market-activity">展会策划</a>
-          <a class="tag c9" href="#experiences" data-target-id="portfolio">社媒运营</a>
-        </div>
-    </section>
-
-    <!-- 教育背景 -->
-    <section class="container education" id="education">
-      <h2>教育背景</h2>
-      <div class="education-row">
-        <div class="edu-card">
-          <div class="edu-title">中山大学</div>
-          <div class="edu-sub">资源与环境 | 硕士学位</div>
-          <div class="edu-time">2020 - 2022</div>
-        </div>
-        <div class="edu-card">
-          <div class="edu-title">东华理工大学</div>
-          <div class="edu-sub">地理信息科学 | 学士学位</div>
-          <div class="edu-time">2016 - 2020</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 工作经历 -->
-    <section class="container experience" id="experiences">
-      <h2>工作经历</h2>
-      <div class="exp-card">
-        <div class="exp-inner">
-          <div class="exp-icon" aria-label="icon">深</div>
-          <div class="exp-content">
-            <div class="exp-header">深圳市荧火蔚然科技有限公司 
-                   <span class="exp-role">品牌专员</span><span class="exp-time" style="margin-left:auto">2024.06 - 2025.04</span></div>
-            
-            <ul class="exp-bullets">
-              <li>深入调研中亚市场，精准开拓当地经销商及门店渠道，通过制定全盘品牌开发与推广计划，最终实现销售额超40万元的业绩突破 <span class="anchor" id="market-dev"></span></li>
-              <li>熟悉从合同签订、收款到发货的订单全流程，高效协调内部生产、物流等部门资源，确保订单按时交付，累计处理订单金额200万元以上<span class="anchor" id="order-mgmt"></span></li>
-              <li>协助策划和执行英国、西班牙市场活动和展会，成功覆盖500多位潜在客户，实现品牌曝光目标，复盘总结出后续市场推广的改进方案 <span class="anchor" id="event-plan"></span></li>
-            </ul>
+        <!-- 统计信息：2+年前端开发经验 / 40万+ 销售业绩 / 4万+ 内容阅读量 -->
+        <div class="hero-stats" aria-label="统计信息" style="display:flex;gap:40px;margin-top:16px;color:#d0d0d0;">
+          <div class="stat-item" style="text-align:left;">
+            <div class="stat-num" style="font-size:28px;font-weight:900;">1.5+</div>
+            <div class="stat-label" style="font-size:14px;color:#c9c9c9;">年前端开发经验</div>
+          </div>
+          <div class="stat-item" style="text-align:left;">
+            <div class="stat-num" style="font-size:28px;font-weight:900;">40万+</div>
+            <div class="stat-label" style="font-size:14px;color:#c9c9c9;">销售业绩</div>
+          </div>
+          <div class="stat-item" style="text-align:left;">
+            <div class="stat-num" style="font-size:28px;font-weight:900;">4万+</div>
+            <div class="stat-label" style="font-size:14px;color:#c9c9c9;">内容阅读量</div>
           </div>
         </div>
       </div>
-      <div class="exp-card">
-        <div class="exp-inner">
-          <div class="exp-icon" aria-label="icon">深</div>
-          <div class="exp-content">
-            <div class="exp-header">深圳城市交通规划设计研究中心 <span class="exp-role">GIS开发工程师</span><span class="exp-time" style="margin-left:auto">2022.07 - 2024.02</span></div>
-            <ul class="exp-bullets">
-              <li>深度参与深圳地铁等大客户的售前技术交流，作为技术核心，将复杂的客户痛点转化为初步技术方案，有效支撑了项目的立项与签约 <span class="anchor" id="gis-project"></span></li>
-              <li>高效协调前端、后端、BIM数据等多个技术部门，确保交付进度，具备极强的内外部资源整合和推进能力 <span class="anchor" id="pre-sales"></span></li>
-              <li>使用Vuejs和Cesium技术栈实现GIS和BIM数据渲染、数据轻量化、数据空间变换和投影转换等功能 <span class="anchor" id="coord"></span></li>
-            </ul>
+      <div class="hero-collage" aria-label="占位图片区域">
+        <img src="assets/hero-ai-2.png" alt="占位图片1" class="collage-img a">
+        <img src="assets/hero-ai-1.png" alt="占位图片2" class="collage-img b">
+        <img src="assets/hero-activity.png" alt="占位图片3" class="collage-img c">
+        <img src="assets/hero-insaccount.png" alt="占位图片4" class="collage-img d">
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作经历时间线 -->
+  <section class="ui-section timeline-wrap" aria-label="工作经历时间线" id="experience">
+    <div class="section-header" style="margin-bottom:8px;">
+      <h2 class="section-title" style="margin:0;">工作经历</h2>
+    </div>
+    <div class="timeline">
+    <div class="timeline-item" data-id="1">
+      <span class="dot" aria-hidden="true"></span>
+      <div class="content">
+        <span class="time-label">2024.06 – 2025.04</span>
+        <div class="title" style="font-weight:700; font-size:18px; margin-top:6px;">商务专员</div>
+        <div class="org-line" style="color:#bbb;margin:6px 0;">深圳市荧火蔚然科技有限公司（电子烟品牌） • 深圳</div>
+        <ul>
+          <li>负责中亚市场拓展与客户维护，实现销售额超40w+。</li>
+          <li>跟进8个研发项目，高效协调内容生产。</li>
+          <li>协助销售与市场活动，提升品牌曝光及合作机会。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-item" data-id="2">
+      <span class="dot" aria-hidden="true"></span>
+      <div class="content">
+        <span class="time-label">2022.07 – 2024.02</span>
+        <div class="title" style="font-weight:700; font-size:18px; margin-top:6px;">GIS开发工程师</div>
+        <div class="org-line" style="color:#bbb;margin:6px 0;">深圳市城市交通规划设计研究中心股份有限公司 • 深圳</div>
+        <ul>
+          <li>参与深圳地铁等重大项目的售前交流，将客户痛点转化为技术方案。</li>
+          <li>编写功能规格说明等技术文档，为客户组织技术培训。</li>
+          <li>负责多个0-1项目搭建，基于 Vue.js + Cesium 实现GIS和BIM数据渲染等功能。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- 精选案例区：简易轮播，桌面两张/屏 -->
+  <section class="ui-section" id="projects" aria-label="精选案例区">
+    <div class="section-header">
+      <h2 class="section-title">精选案例</h2>
+    </div>
+    <div class="carousel-area" id="casesCarousel">
+     <!-- <button class="carousel-nav left" aria-label="上一页">‹</button>--!>
+      <div class="cards-container" id="casesGrid">
+        <div class="card" data-href="project-detail.html" style="background:#1a1a1a; cursor:pointer; display:flex; flex-direction:column;">
+          <div class="card-thumb" style="height:180px"><img src="assets/hero-ai-2.png" alt="占位图1"/></div>
+          <div class="card-content" style="padding:12px 16px;">
+            <span class="tag">AI项目</span>
+            <h3 class="card-title" style="margin:6px 20px;">AI驱动的新媒体0-1阶段增长</h3>
+            <p class="card-desc" style="color:#ddd; margin:0 20px;">半个月粉丝增长84，内容点赞收藏4000+，阅读量4万+，获商业合作邀约</p>
+          <a class="card-detail" href="project-detail.html">查看详情</a>
+          </div>
+        </div>
+        <div class="card" data-href="assets/品牌推广作品集.pdf" style="background:#1a1a1a; cursor:pointer; display:flex; flex-direction:column;">
+          <div class="card-thumb" style="height:180px"><img src="assets/hero-activity.png" alt="占位图2"/></div>
+          <div class="card-content" style="padding:12px 16px;">
+            <span class="tag">市场/项目管理</span>
+            <h3 class="card-title" style="margin:6px 20px;">电子烟品牌管理和推广</h3>
+            <p class="card-desc" style="color:#ddd; margin:0 20px;">运营Ins/Facebook帐号，策划西班牙、英国等市场活动</p>
+          <a class="card-detail" href="assets/品牌推广作品集.pdf">查看详情</a>
           </div>
         </div>
       </div>
-    </section>
+       <!--<button class="carousel-nav right" aria-label="下一页">›</button> --!>
+    </div>
+  </section>
 
-    <!-- 精选项目 -->
-    <section class="container projects" id="portfolio">
-      <h2>精选项目</h2>
-      <div id="expo" style="display:none"></div>
-      <div  style="display:none"></div>
-      <div class="grid-projects" >
-        <div id="market-activity" class="card project-card" aria-label="项目1" >
-          <img src="assets/images/activity.png" alt="项目1封面" />
-          <div class="project-meta">
-	 <div >哥伦比亚展会策划</div>
-<div class="category" >市场项目</div>
-
-
-</div>
-        </div>
-        <div style="display:none"></div>
-        <div   id="ai-media" class="card project-card" aria-label="项目2">
-          <img src="assets/images/AIMedia.jpg" alt="项目2封面" />
-          <div class="project-meta">
-<div >AI职场养生小红书 — 新媒体</div>
-<div class="project-content" >半个月粉丝84，阅读量4w+，成功商业变现</div>
-<div class="AI-category">新媒体项目</div>
-
-
-</div>
-        </div>
+  <!-- 联系区 -->
+  <section class="ui-section contact-wrap" aria-label="联系信息">
+    <h2 class="section-title">联系我</h2>
+    <div class="contacts">
+      <div class="contact-card">
+        <span class="icon" aria-hidden="true">📞</span>
+        <div>157-9786-0920</div>
       </div>
-    </section>
-
-    <!-- 技能与证书 -->
-    <section class="container skills" id="skills">
-      <h2>技能与证书</h2>
-      <div class="skills-grid">
-        <div class="card skill-card">
-          <div class="skill-title">技术技能</div>
-          <div class="skill-items">ArcGIS / QGIS, JavaScript / Python, Vue.js, Cesium</div>
-        </div>
-        <div class="card skill-card">
-          <div class="skill-title">语言能力</div>
-          <div class="skill-items">CET-6, 普通话二级甲等</div>
-        </div>
-        <div class="card skill-card">
-          <div class="skill-title">办公技能</div>
-          <div class="skill-items">Excel/Word/PPT 高级应用</div>
-        </div>
+      <div class="contact-card">
+        <span class="icon" aria-hidden="true">✉️</span>
+        <div>wqh71998@163.com</div>
       </div>
-    </section>
-
-  <!-- 作品集缩略展示 -->
-    <section class="container gallery" id="gallery">
-      <h2>作品集缩略展示</h2>
-      <div class="gallery-grid">
-        <img src="assets/images/account_data.png" alt="缩略图1" class="thumb" data-full="assets/images/thumb1.svg" />
-        <img src="assets/images/content.png" alt="缩略图2" class="thumb" data-full="assets/images/thumb2.svg" />
-        <img src="assets/images/activity.png" alt="缩略图3" class="thumb" data-full="assets/images/thumb3.svg" />
-        <img src="assets/images/KOL.png" alt="缩略图4" class="thumb" data-full="assets/images/profile.svg" />
+      <div class="contact-card">
+        <span class="icon" aria-hidden="true">🌐</span>
+        <div>Portfolio Website</div>
       </div>
-      <a class="btn download" href="assets/files/portfolio.pdf" download>下载完整作品集PDF</a>
-    </section>
+    </div>
+  </section>
 
-    <!-- 联系区及下载按钮 -->
-    <section class="container contact" id="contact">
-      <h2>联系</h2>
-      <p>电话：157-9786-0920 &nbsp; 邮箱：wqh71998@163.com</p>
-      <p class="hint">欢迎联系面试或进一步沟通</p>
-    </section>
-  </main>
-
-
-  <footer class="site-footer container">
-    
-  </footer>
+  <!-- 返回顶部按钮 -->
+  <button id="toTop" class="top-btn" aria-label="返回顶部">↑</button>
 
   <script src="script.js"></script>
 </body>

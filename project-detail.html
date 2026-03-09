@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目详情 - AI驱动的小红书养生帐号数据增长</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --primary-cyan: #00bcd4; --accent-yellow: #fece02; }
+        body { background-color: #000000; color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .bg-card { background-color: #1a1a1a; }
+        .text-cyan { color: var(--primary-cyan); }
+        .bg-cyan { background-color: var(--primary-cyan); }
+        /* 隐藏滚动条 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        
+        /* 解决方案淡入动画 */
+        .fade-enter { opacity: 0; transform: translateY(10px); }
+        .fade-enter-active { opacity: 1; transform: translateY(0); transition: opacity 1s ease-out, transform 1s ease-out; }
+    </style>
+</head>
+<body class="antialiased pb-20">
+
+    <header class="max-w-[1200px] mx-auto px-6 pt-12 pb-8">
+        <a href="javascript:history.go(-1)" class="inline-flex items-center text-cyan hover:underline mb-8 font-bold transition">
+            <span class="mr-2">←</span> 返回作品集
+        </a >
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">AI驱动的新媒体增长与商业化项目</h1>
+        <div class="flex gap-3">
+            <span class="bg-[#fece02] text-black text-xs font-bold px-3 py-1 rounded">AI项目</span>
+            <span class="bg-[#333] text-[#ccc] text-xs font-bold px-3 py-1 rounded">2025.7 - 至今</span>
+        </div>
+    </header>
+
+    <section class="max-w-[1200px] mx-auto px-6 py-10 border-t border-[#333]">
+        <div class="flex gap-4 mb-8">
+            <button id="btn-bg" class="tab-btn active bg-cyan text-white px-6 py-2 rounded-full font-bold transition">项目背景</button>
+        </div>
+
+        <div class="bg-card p-8 rounded-xl border border-[#333] min-h-[160px]">
+            <div id="content-bg" class="tab-content block text-[#cccccc] leading-relaxed">
+                快速实现小红书账号0-1阶段，利用Coze空间搭建自动化工作流，高效内容生产与变现，验证AI在垂直领域的可行性。
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-[1200px] mx-auto px-6 py-10 border-t border-[#333]">
+        <h2 class="text-2xl font-bold mb-8">技术栈 & 方法论</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+           <img src="assets/workflow-1.png" alt="占位图片1" class="collage-img a">
+           <img src="assets/workflow-2.png" alt="占位图片1" class="collage-img a">
+        </div>
+    </section>
+
+    <section class="max-w-[1200px] mx-auto px-6 py-10 border-t border-[#333]">
+        <h2 class="text-2xl font-bold mb-8">成果展示</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <img src="assets/hero-ai-1.png" alt="占位图片1" class="collage-img a">
+           <img src="assets/hero-ai-2.png" alt="占位图片1" class="collage-img a">
+            </div>
+            
